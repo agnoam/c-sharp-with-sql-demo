@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
@@ -18,6 +14,7 @@ namespace WindowsFormsApp1 {
         public Login() {
             InitializeComponent();
 
+            // Setting the password inputs as dots
             passAgainTextBox.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
             passwordTextBox.UseSystemPasswordChar = PasswordPropertyTextAttribute.Yes.Password;
         }
@@ -86,8 +83,7 @@ namespace WindowsFormsApp1 {
             encrShift = encryptionTextBox.Text;
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) {
             if (checkBox1.Checked) {
                 passAgainTextBox.UseSystemPasswordChar = PasswordPropertyTextAttribute.No.Password;
                 passwordTextBox.UseSystemPasswordChar = PasswordPropertyTextAttribute.No.Password;
