@@ -1,7 +1,5 @@
-﻿namespace SQL_Demo
-{
-    partial class Login
-    {
+﻿namespace SQL_Demo {
+    partial class Login {
         /// <summary>
         /// Required designer variable.
         /// </summary>
@@ -11,10 +9,8 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
+        protected override void Dispose(bool disposing) {
+            if (disposing && (components != null)) {
                 components.Dispose();
             }
             base.Dispose(disposing);
@@ -26,20 +22,20 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
-        {
+        private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.loginButton = new System.Windows.Forms.Button();
-            this.nameTextBox = new System.Windows.Forms.TextBox();
-            this.lastNameTextBox = new System.Windows.Forms.TextBox();
+            this.signupLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
-            this.encryptionTextBox = new System.Windows.Forms.TextBox();
-            this.encryptionLabel = new System.Windows.Forms.Label();
-            this.writePassword = new System.Windows.Forms.Label();
-            this.writeLastNameLabel = new System.Windows.Forms.Label();
-            this.writeNameLabel = new System.Windows.Forms.Label();
-            this.passAgainTextBox = new System.Windows.Forms.TextBox();
-            this.enterPasswordLabel = new System.Windows.Forms.Label();
-            this.showCheckBox = new System.Windows.Forms.CheckBox();
+            this.showPasswordCheckBox = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.encryptionKeyTextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // loginButton
@@ -50,124 +46,127 @@
             this.loginButton.TabIndex = 0;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = true;
-            this.loginButton.Click += new System.EventHandler(this.button1_Click);
+            this.loginButton.Click += new System.EventHandler(this.loginBtn_Click);
             // 
-            // nameTextBox
+            // signupLabel
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(341, 59);
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.nameTextBox.TabIndex = 1;
-            this.nameTextBox.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.signupLabel.AutoSize = true;
+            this.signupLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.signupLabel.Location = new System.Drawing.Point(598, 416);
+            this.signupLabel.Name = "signupLabel";
+            this.signupLabel.Size = new System.Drawing.Size(109, 25);
+            this.signupLabel.TabIndex = 1;
+            this.signupLabel.Text = "sign up OR";
+            this.signupLabel.Click += new System.EventHandler(this.signUpLabel_Click);
             // 
-            // lastNameTextBox
+            // label1
             // 
-            this.lastNameTextBox.Location = new System.Drawing.Point(341, 141);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.Size = new System.Drawing.Size(100, 22);
-            this.lastNameTextBox.TabIndex = 2;
-            this.lastNameTextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
+            this.label1.Location = new System.Drawing.Point(53, 74);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(443, 48);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "SQL Demo Application";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(529, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(201, 217);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.usernameTextBox.Location = new System.Drawing.Point(71, 228);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(249, 26);
+            this.usernameTextBox.TabIndex = 4;
+            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged);
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(341, 226);
+            this.passwordTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.passwordTextBox.Location = new System.Drawing.Point(71, 312);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(100, 22);
-            this.passwordTextBox.TabIndex = 3;
-            this.passwordTextBox.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            this.passwordTextBox.Size = new System.Drawing.Size(249, 26);
+            this.passwordTextBox.TabIndex = 4;
+            this.passwordTextBox.TextChanged += new System.EventHandler(this.passwordTextBox_TextChanged);
             // 
-            // encryptionTextBox
+            // showPasswordCheckBox
             // 
-            this.encryptionTextBox.Location = new System.Drawing.Point(341, 381);
-            this.encryptionTextBox.Name = "encryptionTextBox";
-            this.encryptionTextBox.Size = new System.Drawing.Size(100, 22);
-            this.encryptionTextBox.TabIndex = 4;
-            this.encryptionTextBox.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
+            this.showPasswordCheckBox.AutoSize = true;
+            this.showPasswordCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.showPasswordCheckBox.Location = new System.Drawing.Point(326, 315);
+            this.showPasswordCheckBox.Name = "showPasswordCheckBox";
+            this.showPasswordCheckBox.Size = new System.Drawing.Size(68, 22);
+            this.showPasswordCheckBox.TabIndex = 5;
+            this.showPasswordCheckBox.Text = "Show";
+            this.showPasswordCheckBox.UseVisualStyleBackColor = true;
+            this.showPasswordCheckBox.CheckedChanged += new System.EventHandler(this.showPasswordCheckBox_CheckedChanged);
             // 
-            // encryptionLabel
+            // label2
             // 
-            this.encryptionLabel.AutoSize = true;
-            this.encryptionLabel.Location = new System.Drawing.Point(140, 349);
-            this.encryptionLabel.Name = "encryptionLabel";
-            this.encryptionLabel.Size = new System.Drawing.Size(538, 17);
-            this.encryptionLabel.TabIndex = 5;
-            this.encryptionLabel.Text = "Write your encryption (The numbers need to be at the same length of the password)" +
-    "";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(67, 205);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(170, 20);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Enter your username:";
             // 
-            // writePassword
+            // label3
             // 
-            this.writePassword.AutoSize = true;
-            this.writePassword.Location = new System.Drawing.Point(326, 192);
-            this.writePassword.Name = "writePassword";
-            this.writePassword.Size = new System.Drawing.Size(137, 17);
-            this.writePassword.TabIndex = 6;
-            this.writePassword.Text = "Write your password";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label3.Location = new System.Drawing.Point(68, 289);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(168, 20);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Enter your password:";
             // 
-            // writeLastNameLabel
+            // encryptionKeyTextBox
             // 
-            this.writeLastNameLabel.AutoSize = true;
-            this.writeLastNameLabel.Location = new System.Drawing.Point(325, 106);
-            this.writeLastNameLabel.Name = "writeLastNameLabel";
-            this.writeLastNameLabel.Size = new System.Drawing.Size(138, 17);
-            this.writeLastNameLabel.TabIndex = 7;
-            this.writeLastNameLabel.Text = "Write your last name";
+            this.encryptionKeyTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.encryptionKeyTextBox.Location = new System.Drawing.Point(71, 392);
+            this.encryptionKeyTextBox.Name = "encryptionKeyTextBox";
+            this.encryptionKeyTextBox.Size = new System.Drawing.Size(249, 26);
+            this.encryptionKeyTextBox.TabIndex = 8;
+            this.encryptionKeyTextBox.TextChanged += new System.EventHandler(this.encryptionKeyTextBox_TextChanged);
             // 
-            // writeNameLabel
+            // label4
             // 
-            this.writeNameLabel.AutoSize = true;
-            this.writeNameLabel.Location = new System.Drawing.Point(338, 23);
-            this.writeNameLabel.Name = "writeNameLabel";
-            this.writeNameLabel.Size = new System.Drawing.Size(112, 17);
-            this.writeNameLabel.TabIndex = 8;
-            this.writeNameLabel.Text = "Write your name";
-            // 
-            // passAgainTextBox
-            // 
-            this.passAgainTextBox.Location = new System.Drawing.Point(341, 299);
-            this.passAgainTextBox.Name = "passAgainTextBox";
-            this.passAgainTextBox.Size = new System.Drawing.Size(100, 22);
-            this.passAgainTextBox.TabIndex = 9;
-            this.passAgainTextBox.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
-            // 
-            // enterPasswordLabel
-            // 
-            this.enterPasswordLabel.AutoSize = true;
-            this.enterPasswordLabel.Location = new System.Drawing.Point(299, 270);
-            this.enterPasswordLabel.Name = "enterPasswordLabel";
-            this.enterPasswordLabel.Size = new System.Drawing.Size(177, 17);
-            this.enterPasswordLabel.TabIndex = 10;
-            this.enterPasswordLabel.Text = "Enter again your password";
-            // 
-            // showCheckBox
-            // 
-            this.showCheckBox.AutoSize = true;
-            this.showCheckBox.Location = new System.Drawing.Point(481, 245);
-            this.showCheckBox.Name = "showCheckBox";
-            this.showCheckBox.Size = new System.Drawing.Size(64, 21);
-            this.showCheckBox.TabIndex = 11;
-            this.showCheckBox.Text = "Show";
-            this.showCheckBox.UseVisualStyleBackColor = true;
-            this.showCheckBox.CheckedChanged += new System.EventHandler(this.showCheckBox_CheckedChanged);
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label4.Location = new System.Drawing.Point(69, 369);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(203, 20);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Enter your encryption key:";
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.showCheckBox);
-            this.Controls.Add(this.enterPasswordLabel);
-            this.Controls.Add(this.passAgainTextBox);
-            this.Controls.Add(this.writeNameLabel);
-            this.Controls.Add(this.writeLastNameLabel);
-            this.Controls.Add(this.writePassword);
-            this.Controls.Add(this.encryptionLabel);
-            this.Controls.Add(this.encryptionTextBox);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.encryptionKeyTextBox);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.showPasswordCheckBox);
             this.Controls.Add(this.passwordTextBox);
-            this.Controls.Add(this.lastNameTextBox);
-            this.Controls.Add(this.nameTextBox);
+            this.Controls.Add(this.usernameTextBox);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.signupLabel);
             this.Controls.Add(this.loginButton);
             this.Name = "Login";
-            this.Text = "Login";
+            this.Text = "Login To SQL Demo";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,17 +175,15 @@
         #endregion
 
         private System.Windows.Forms.Button loginButton;
-        private System.Windows.Forms.TextBox nameTextBox;
-        private System.Windows.Forms.TextBox lastNameTextBox;
+        private System.Windows.Forms.Label signupLabel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox usernameTextBox;
         private System.Windows.Forms.TextBox passwordTextBox;
-        private System.Windows.Forms.TextBox encryptionTextBox;
-        private System.Windows.Forms.Label encryptionLabel;
-        private System.Windows.Forms.Label writePassword;
-        private System.Windows.Forms.Label writeLastNameLabel;
-        private System.Windows.Forms.Label writeNameLabel;
-        private System.Windows.Forms.TextBox passAgainTextBox;
-        private System.Windows.Forms.Label enterPasswordLabel;
-        private System.Windows.Forms.CheckBox showCheckBox;
+        private System.Windows.Forms.CheckBox showPasswordCheckBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox encryptionKeyTextBox;
+        private System.Windows.Forms.Label label4;
     }
 }
-
