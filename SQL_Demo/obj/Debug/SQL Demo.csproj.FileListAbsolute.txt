@@ -10,3 +10,15 @@ C:\Users\joe\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsForms
 C:\Users\joe\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Database\DemoDatabase.mdf
 C:\Users\joe\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\Database\DemoDatabase_log.ldf
 C:\Users\joe\documents\visual studio 2017\Projects\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\bin\Debug\Database\DemoDatabase.mdf
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\bin\Debug\Database\DemoDatabase_log.ldf
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\bin\Debug\WindowsFormsApp1.exe
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\obj\Debug\SQL Demo.csprojAssemblyReference.cache
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\obj\Debug\SQL_Demo.Login.resources
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\obj\Debug\SQL Demo.csproj.GenerateResource.cache
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\obj\Debug\SQL Demo.csproj.CoreCompileInputs.cache
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\obj\Debug\WindowsFormsApp1.exe
+C:\Users\joe\Documents\Visual Studio 2017\Projects\SQL_Demo\SQL_Demo\obj\Debug\WindowsFormsApp1.pdb

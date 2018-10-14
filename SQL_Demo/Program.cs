@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data.SqlClient;
-using System.IO;
 using System.Windows.Forms;
 
 namespace SQL_Demo {
@@ -15,6 +13,7 @@ namespace SQL_Demo {
             Application.SetCompatibleTextRenderingDefault(false);
 
             if(SQL_Manager.connectToSQL()) {
+                SQL_Manager.selectAll("Users");
                 Application.Run(new Login());
             } else {
                 MessageBox.Show("Cannot access the Database, Please try again later");
