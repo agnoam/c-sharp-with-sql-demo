@@ -69,7 +69,7 @@ public class SQL_Manager {
     }
 
     public static AuthObject[] getAuthObjectByUsername(string username) {
-        string query = $"SELECT Password, IsMD5 FROM Users WHERE Username = {username}";
+        string query = $"SELECT * FROM Users WHERE Username = '{username}'";
         List<AuthObject> authObjects = new List<AuthObject>();
 
         try {
@@ -83,7 +83,7 @@ public class SQL_Manager {
                     authObjects.Add(new AuthObject(
                         dataReader["Username"].ToString(), 
                         dataReader["Password"].ToString(),
-                        EncryptionManger.boolFromString(dataReader["IsMD5"].ToString())
+                        (bool) dataReader["IsMD5"]
                     ));
                 }
 
