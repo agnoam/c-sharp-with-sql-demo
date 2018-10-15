@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 
 public class SQL_Manager {
@@ -46,25 +47,32 @@ public class SQL_Manager {
         }
     }
 
-    public static void insertNewUser(UserRecord user) {
-        try {
-            connectToSQL();
+    public static bool insertNewUser(UserRecord user) {
+        if(getAuthObjectByUsername(user.username).Length < 0) {
+            try {
+                connectToSQL();
 
-            if(con.State == ConnectionState.Open) {
-                SqlCommand cmd = new SqlCommand(@"INSERT INTO Users (Username, FirstName, LastName, Password, IsMD5)
-                    VALUES('" + user.username + "', '" + user.name + "', '" + user.lastName + "', '" + user.password + "', "
-                    + (user.isMD5 ? 1 : 0) + ")");
-                cmd.Connection = con;
+                if(con.State == ConnectionState.Open) {
+                    SqlCommand cmd = new SqlCommand(@"INSERT INTO Users (Username, FirstName, LastName, Password, IsMD5)
+                        VALUES('" + user.username + "', '" + user.name + "', '" + user.lastName + "', '" + user.password + "', "
+                        + (user.isMD5 ? 1 : 0) + ")");
+                    cmd.Connection = con;
 
-                cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                MessageBox.Show("User Inserted successfuly");
+                    // Closing SQL connection
+                    closeConnection();
 
-                // Closing SQL connection
-                closeConnection();
+                    return true;
+                }
+
+                throw new Exception("Cannot connect to the Database, Please check");
+            } catch(SqlException ex) {
+                throw ex;
             }
-        } catch(SqlException ex) {
-            throw ex;
+        } else {
+            // There is record with taht user name
+            return false;
         }
     }
 
@@ -157,8 +165,27 @@ public class AuthObject {
     public bool isMD5 { get; set; }
 
     public AuthObject(string username_c, string encryptedPass_c, bool isMD5_c) {
-        username = username_c;
-        encryptedPass = encryptedPass_c;
+        username = removeExcessiveWhitespace(username_c);
+        username = username.Remove(username.Length - 1);
+        encryptedPass = removeExcessiveWhitespace(encryptedPass_c);
         isMD5 = isMD5_c;
+    }
+
+    private string removeExcessiveWhitespace(string value) {
+        if (value == null) {
+            return null;
+        }
+
+        var builder = new StringBuilder();
+        var ignoreWhitespace = false;
+        foreach (var c in value) {
+            if (!ignoreWhitespace || c != ' ') {
+                builder.Append(c);
+            }
+
+            ignoreWhitespace = c == ' ';
+        }
+
+        return builder.ToString();
     }
 }

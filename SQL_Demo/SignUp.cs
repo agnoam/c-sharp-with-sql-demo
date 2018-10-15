@@ -22,21 +22,32 @@ namespace SQL_Demo {
         }
 
         private void button1_Click(object sender, EventArgs e) {
-            MessageBox.Show(useMD5.ToString());
             if (
                 username !=  "" && name != "" && lastN != "" && password != "" && passAgain != "" && encrShift != "0" ||
                 username != "" && name != "" && lastN != "" && password != "" && passAgain != "" && useMD5
             ) {
                 // Checking if the passwords equal
                 if(password == passAgain && encrShift.Length == passAgain.Length) {
-                    SQL_Manager.insertNewUser(
+                    bool isInserted = SQL_Manager.insertNewUser(
                         new UserRecord(username, name, lastN, EncryptionManger.easyEncryption(password, encrShift))
                     );
+
+                    if(isInserted) {
+                      MessageBox.Show("User Inserted successfuly");  
+                    } else {
+                        MessageBox.Show("This username already exists please choose another");
+                    }
                 } else {
                     if(password == passAgain && useMD5) {
-                        SQL_Manager.insertNewUser(
+                        bool isInserted = SQL_Manager.insertNewUser(
                             new UserRecord(username, name, lastN, EncryptionManger.MD5(password), useMD5)
                         );
+
+                        if(isInserted) {
+                            MessageBox.Show("User Inserted successfuly");  
+                        } else {
+                            MessageBox.Show("This username already exists please choose another");
+                        }
                     } else {
                         string text = "";
                         if (encrShift.Length != password.Length || !useMD5) {
